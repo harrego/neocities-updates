@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	{% if page.layout == "post" %}
+	<title>{{ page.date_display }}</title> 
+  {% else if page.title %}
+	<title>{{ page.title }}</title>
+  {% else %}
+  <title>{{ site.title }}</title>
+  {% endif %}
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<style>
+		body {
+			font-family: serif;
+      		line-height: 1.5;
+		}
+		h1 {
+			font-size: 18px;
+		}
+		h2 {
+			font-size: 16px;
+		}
+		.container {
+			max-width: 600px;
+		}
+		.title {
+			margin-bottom: 0;
+		}
+		.date {
+			margin-top: 0;
+		}
+		.mt-0 {
+			margin-top: 0;
+		}
+		.mb-0 {
+			margin-bottom: 0;
+		}
+		article img {
+			max-width: 250px;
+		}
+		.jumbotron {
+			background-color: lightgray;
+			border: 1px dashed black;
+			max-width: 525px;
+		}
+		.jumbotron p {
+			margin: 0;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		{{ content }}
+	</div>
+</body>
+</html>

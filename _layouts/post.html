@@ -1,0 +1,17 @@
+---
+layout: default
+---
+
+<p><i><a href="{{ site.baseurl }}updates">Back to all yarrie updates</a></i></p>
+
+<article>
+    
+
+    {% if page.show_title %}
+    <h1 class="title">{{ page.title }}</h1>
+    {% endif %}
+    <p class="date"><i>{{ page.date_display }}</i></p>
+
+    {{ content }}
+
+</article>

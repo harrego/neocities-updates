@@ -1,0 +1,21 @@
+---
+title: What's New
+layout: default
+---
+
+<header>
+    <h1 class="mb-0">yarrie updates</h1>
+    <p class="mt-0"><a href="{{ site.home }}">{{ site.home_display }}</a></p>
+</header>
+
+<div class="jumbotron">
+    <p><b>UNDER CONSTRUCTION</b> This is my Instagram stories feed on Neocities: it's live updating, has RSS, and is entirely hosted on Neocities. This is not the page's final form! I want to style it right and give it an actual feed instead of links. Make sure to add the RSS feed to your reader! <a href="https://github.com/harrego/neocities-updates">Check out the progress here!</a></a></p>
+</div>
+
+<p><i><a href="{{ site.baseurl }}updates/feed.xml">RSS</a></i></p>
+
+<ul class="posts-ul">
+{% for post in site.posts %}
+    <li><a href="{{ post.url }}">{{ post.date_display }}</a> <i>({{ post.title }})</i></i></li>
+{% endfor %}
+</ul>
