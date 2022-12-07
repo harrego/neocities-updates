@@ -13,15 +13,13 @@
     
 {% for post in site.posts %}
 <entry>
-    <title>{{ post.date_display }}</title>
+    <!-- <title>{{ post.date_display }}</title> -->
     <link rel="alternate" type="text/html" href="{{ site.url }}{{ post.url }}" />
     <id>{{ site.url }}{{ post.url }}</id>
     <published>{{ post.date | date_to_xmlschema }}</published>
     <updated>{{ post.date | date_to_xmlschema }}</updated>
     <author>
         <name>{{ site.author }}</name>
-        <uri>{{ site.url }}</uri>
-        <email>{{ site.email }}</email>
     </author>
     <content type="html" xml:base="{{ site.url }}{{ site.baseurl }}updates"><![CDATA[{{ post.content }}]]></content>
 </entry>
